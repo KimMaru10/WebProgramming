@@ -1,0 +1,228 @@
+html,body,h1,h2,h3,h4,h5,h6,p{margin: 0px; padding: 0px; border: 0;}
+div,span,article,section,header,footer,p,ul,li,label{box-sizing: border-box;}
+
+body{
+  background: #f4f1e8;  
+}
+@font-face {
+    font-family: 'Arita-dotum-Medium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+/*목차*/
+input[id="menuicon"]{display: none;}
+input[id="menuicon"] + label{
+  display: block;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+input[id="menuicon"] + label span{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #A6A4A0;
+  transition: all .35s;
+}
+input[id="menuicon"] + label span:nth-child(1){
+  top:0;
+}
+input[id="menuicon"] + label span:nth-child(2){
+  top:50%;
+  transform: translateY(-50%);
+}
+input[id="menuicon"] + label span:nth-child(3){
+  bottom:0;
+}
+input[id="menuicon"]:checked + label{z-index:2;}
+input[id="menuicon"]:checked + label span:nth-child(1){top: 50%;transform: translateY(-50%) rotate(45deg);}
+input[id="menuicon"]:checked + label span:nth-child(2){opacity: 0;}
+input[id="menuicon"]:checked + label span:nth-child(3){bottom: 50%;transform: translateY(50%) rotate(-45deg);}
+div[class="sidebar"]{
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: -2%;
+  right:-300px;
+  z-index: 1;
+  transition: all .35s;
+  background: #f4f1e8;
+  box-shadow: 5px 5px 5px 5px gray;
+}
+input[id="menuicon"]:checked + label + div{
+  right: 0;
+}
+input[id="menuicon"] + label{
+  display: block;
+  width: 60px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  top: calc(50% - 25px);
+  transition: all .35s;
+  cursor: pointer;
+}
+input[id="menuicon"]:checked+label{
+  z-index: 2;
+  right: 200px;
+}
+#sidebar_ul{
+  list-style-type: none;
+  line-height: 50px;
+  position: absolute;
+  left: 25%;
+  top: 30%;
+  color: black;
+}
+/*목차 마감*/
+
+/*헤더 시작*/
+header{
+  background-color: #f4f1e8;
+  position: fixed;
+  z-index: 1;
+  width: 100vmax;
+  height: 50px;
+  
+}
+.heder_container{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  line-height: 0px;
+}
+header ul {
+  list-style-type: none;
+  overflow: auto;
+  
+}
+header ul li{
+  margin: 10px;
+  padding-right: 40px;
+  float: left;
+}
+
+
+/*헤더 마감*/
+
+/*nav시작*/
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vmax;
+    height: 350px;
+}
+.nav_line span:nth-child(1){
+  background-color: black;
+  width: 100%;
+  height: 1.5px;
+  border: 0px; 
+  position: absolute;
+  top: 50px;
+  left: 0%;
+}
+.nav_line span:nth-child(2){
+    background-color: black;
+    width: 1.5px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    left: 30%; top: 110px;
+    border: 0px;
+}
+.nav_line span:nth-child(3){
+    background-color: black;
+    width: 1.5px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    right:30%; top: 110px;
+    border: 0px;
+}
+.nav_line span:nth-child(4){
+    background-color: black;
+    width: 100%;
+    height: 1.5px;
+    position: absolute;
+    left: 0%;
+    top: 350px;
+}
+#main_title{
+  font-size: 60px;
+  font-family: 'Hi Melody', cursive;
+  text-align: center;
+}
+#p_left{
+    font-family: 'Arita-dotum-Medium';
+    font-size: 25px;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    left: 5%;
+    
+}
+#p_right{
+    font-family: 'Arita-dotum-Medium';
+    font-size: 25px;
+    text-align: center;
+    position: absolute;
+    visibility: hidden;
+    right: 5%;
+}
+/*nav마감*/
+
+@font-face {
+  font-family: 'Arita-dotum-Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/*section시작*/
+section{
+    width: 100vmax;
+    font-family: 'Arita-dotum-Medium';
+}
+.section_container{
+    text-align: center;
+}
+.section_container p{
+    font-family: 'Arita-dotum-Medium';
+    font-size: 20px;
+    margin: 50px;
+}
+#s_imgStyle1{
+    width: 600px;
+    height: 400px;
+    margin: 30px;
+}
+#s_imgStyle2{
+    width: 400px;
+    height: 500px;
+    margin: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#s_imgStyle3{
+    width: 400px;
+    height: 300px;
+    margin: 30px;
+    margin-right: 20px;
+}
+#s_imgStyle4{
+  width: 300px;
+  height: 400px;
+  margin: 30px;
+  margin-right: 10px;
+}
+#s_imgStyle5{
+  width: 400px;
+  height: 400px;
+  margin: 30px;
+  margin-left: 10px;
+}

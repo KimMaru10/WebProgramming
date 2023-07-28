@@ -1,0 +1,417 @@
+html,body,h1,h2,h3,h4,h5,h6,p{margin: 0px; padding: 0px; border: 0;}
+div,span,article,section,header,footer,p,ul,li,label{box-sizing: border-box;}
+
+body{
+  background: #f4f1e8;  
+}
+
+/*목차*/
+input[id="menuicon"]{display: none;}
+input[id="menuicon"] + label{
+  display: block;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+}
+input[id="menuicon"] + label span{
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background-color: #A6A4A0;
+  transition: all .35s;
+}
+input[id="menuicon"] + label span:nth-child(1){
+  top:0;
+}
+input[id="menuicon"] + label span:nth-child(2){
+  top:50%;
+  transform: translateY(-50%);
+}
+input[id="menuicon"] + label span:nth-child(3){
+  bottom:0;
+}
+input[id="menuicon"]:checked + label{z-index:2;}
+input[id="menuicon"]:checked + label span:nth-child(1){top: 50%;transform: translateY(-50%) rotate(45deg);}
+input[id="menuicon"]:checked + label span:nth-child(2){opacity: 0;}
+input[id="menuicon"]:checked + label span:nth-child(3){bottom: 50%;transform: translateY(50%) rotate(-45deg);}
+div[class="sidebar"]{
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: -2%;
+  right:-300px;
+  z-index: 1;
+  transition: all .35s;
+  background: #f4f1e8;
+  box-shadow: 5px 5px 5px 5px gray;
+}
+input[id="menuicon"]:checked + label + div{
+  right: 0;
+}
+input[id="menuicon"] + label{
+  display: block;
+  width: 60px;
+  height: 50px;
+  position: fixed;
+  right: 0;
+  top: calc(50% - 25px);
+  transition: all .35s;
+  cursor: pointer;
+}
+input[id="menuicon"]:checked+label{
+  z-index: 2;
+  right: 200px;
+}
+#sidebar_ul{
+  list-style-type: none;
+  line-height: 50px;
+  position: absolute;
+  left: 25%;
+  top: 30%;
+  color: black;
+}
+/*목차 마감*/
+
+/*헤더 시작*/
+header{
+  background-color: #f4f1e8;
+  position: fixed;
+  z-index: 1;
+  width: 100vmax;
+  height: 50px;
+  
+}
+.heder_container{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  line-height: 0px;
+}
+header ul {
+  list-style-type: none;
+  overflow: auto;
+  
+}
+header ul li{
+  margin: 10px;
+  padding-right: 40px;
+  float: left;
+}
+
+
+/*헤더 마감*/
+
+/*nav시작*/
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100vmax;
+    height: 350px;
+}
+.nav_line span:nth-child(1){
+  background-color: black;
+  width: 100%;
+  height: 1.5px;
+  border: 0px; 
+  position: absolute;
+  top: 50px;
+  left: 0%;
+}
+.nav_line span:nth-child(2){
+    background-color: black;
+    width: 1.5px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    left: 30%; top: 110px;
+    border: 0px;
+}
+.nav_line span:nth-child(3){
+    background-color: black;
+    width: 1.5px;
+    height: 150px;
+    display: block;
+    position: absolute;
+    right:30%; top: 110px;
+    border: 0px;
+}
+.nav_line span:nth-child(4){
+    background-color: black;
+    width: 100%;
+    height: 1.5px;
+    position: absolute;
+    left: 0%;
+    top: 350px;
+}
+#main_title{
+    font-size: 60px;
+    font-family: 'Hi Melody', cursive;
+    text-align: center;
+}
+
+@font-face {
+  font-family: 'Arita-dotum-Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+#p_left{
+    font-family: 'Arita-dotum-Medium';
+    font-size: 25px;
+    text-align: right;
+    position: absolute;
+    visibility: hidden;
+    left: 5%;
+    
+}
+#p_right{
+    font-family: 'Arita-dotum-Medium';
+    font-size: 25px;
+    text-align: left;
+    position: absolute;
+    visibility: hidden;
+    right: 5%; 
+}
+/*nav마감*/
+
+/*section시작*/
+section{
+  width: 100vmax;
+}
+.imgs{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+img{width: 600px; height: 600px;}
+
+.Go_Hot{
+  position: relative;
+  left: 20%;
+  top: 200px;
+}
+.HOT{
+  position: absolute;
+  left: 15%;
+  top: 48%;
+  width: 600px;
+  height: 600px;
+}
+#ph1{
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 30px;
+  top:70px;
+  visibility: hidden;
+}
+#sh1{
+  display: block;
+  position: relative;
+  left: 110px;
+  top: 80px;
+  background-color: white;
+  width: 150px;
+  height: 3px;
+  visibility: hidden;
+}
+#ph2{
+  font-size: 25px;
+  color: white;
+  position: relative;
+  left: 95px;
+  top: 90px;;
+  visibility: hidden;
+}
+.HOT:hover #sh1{
+  visibility: visible;
+  transition-delay: 0.5s;
+}
+.HOT:hover #ph1{
+  top: 50px;
+  transition-delay: 0.5s;
+  transition-duration: 1s;
+}
+.HOT:hover #ph1{
+  visibility: visible;
+  transition-delay: 0.8s;
+}
+.HOT:hover #ph2{
+  top: 110px;
+  transition-delay: 0.5s;
+  transition-duration: 1s;
+}
+.HOT:hover #ph2{
+  visibility: visible;
+  transition-delay: 0.8s;
+}
+#HOT_CAFE{
+  position: absolute;
+  color:white;
+  top: 3%;
+  left: 3%;
+}
+.HOT:hover #HOT_CAFE{
+  opacity: 0%;
+  transition-duration:0.7s;
+}
+.HOT:hover{
+  opacity: 55%;
+}
+
+.section_line span:nth-child(1){
+  width:1.5px;
+  height: 120%;
+  display: block;
+  position: absolute;
+  left:60%;
+  top: 45%;
+  background-color: black;
+}
+.section_line span:nth-child(2){
+  width: 25%;
+  height: 1.5px;
+  display: block;
+  position: absolute;
+  left: 60%;
+  top:122%;
+  background-color: black;
+}
+.section_line span:nth-child(3){
+  width:100%;
+  height: 1.5px;
+  display: block;
+  position: absolute;
+  top: 180%;
+  background-color: black;
+}
+@font-face {
+  font-family: 'Arita-dotum-Medium';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.HOT_CAFE_text{
+  font-family: 'Arita-dotum-Medium';
+  width: 350px;
+  height: 500px;
+  margin: 10px;
+  padding: 10px;
+  position: absolute;
+  display: block;
+  justify-content: center;
+  left: 61%;
+  top: 48%;
+
+}
+.mypage{
+
+  width: 600px;
+  height: 300px;
+  margin: 10px;
+  padding: 10px;
+  position: absolute;
+  left: 14.2%;
+  top :125%;
+}
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+.slides {
+    padding: 0;
+    width: 250px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    position:absolute;
+    left: 65%;
+    top:125%;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+.slides input { display: none; }
+.slide-container { display: block; }
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 250px;
+    height: 300px;
+    display: block;
+    position: absolute;
+    transform: scale(0);
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 50px;
+    height: 100%;
+    display: none;
+    position: absolute;
+
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 100pt;
+    text-align: center;
+    line-height: 300px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+input:checked + .slide-container .nav label { display: block; }
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+

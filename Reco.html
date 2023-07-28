@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>춘천의 핫한 카페</title>
+      <meta charset="utf-8">
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+      <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Joan&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="Reco.css">
+      <script src="../jQuery/jquery-3.6.0.min.js"></script>
+      <style type="text/css">
+        a:link {color:black; text-decoration: none;}
+        a:visited {color:black; text-decoration: none;}
+       </style>
+  </head>
+
+  <body>
+    <header>
+        <div class="heder_container">
+          <ul>
+            <li><a href="Home.html">HOME</a></li>
+            <li><a href="Reco.html">추천</a></li>
+          </ul>
+        </div>
+    </header>
+
+    <div>
+      <input type="checkbox" id="menuicon">
+      <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="sidebar">
+        <ul id="sidebar_ul">
+          <li><a href="Cafe1.html">래드브릭</a></li>
+          <li><a href="Cafe2.html">핀든하우스</a></li>
+          <li><a href="Cafe3.html">희랑</a></li>
+          <li><a href="Cafe4.html">교토정원</a></li>
+          <li> <a href="Cafe5.html">포지티브즈</a></li>
+        </ul>
+      </div>
+    </div>
+    <nav>
+        <script>
+            setTimeout(function(){
+                var pl = document.getElementById("p_left");
+                var pr = document.getElementById("p_right");
+                pl.style.left="18%";
+                pl.style.transitionDuration="2.5s"
+                pl.style.visibility="visible"
+                pr.style.right="18%";
+                pr.style.transitionDuration="2.5s"
+                pr.style.visibility="visible"
+                
+            },2000)
+        </script>
+        <div id="p_left">
+            <p>춘천의 인기 <br>있는 카페</p>
+        </div>
+        <div id="main_title">
+          <p>
+            김마루가 소개하는<br>
+            춘천 카페
+          <p>
+        </div>
+        <div class="nav_line">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="p_right">
+          <p>잘알려지지 <br>않은 카페</p>
+        </div>  
+    </nav>
+
+    <section>
+      <br>
+        <div class="container_Reco">
+            <div class="s_item" onclick="location.href='Cafe1.html'">
+              <div>
+                <img src="../dPro/photo/레드브릭1.jpeg">
+              </div>
+              <div id="item_p1">
+                <p>"빨간 벽돌이 아름다운"</p>
+              </div>
+              <div class="d3">
+                <p id="item_p2">레드브릭</p>
+                <span id="item_s1"></span>
+                <p id="item_p3">VER TUDO</p>
+              </div> 
+            </div>
+            <div class="s_item" onclick="location.href='Cafe3.html'">
+              <div>
+                <img src="../dPro/photo/희랑.jpg">
+              </div>
+              <div id="item_p1">
+                <p>"한림대 근처"</p>
+              </div>
+              <div class="d3">
+                <p id="item_p2">희랑</p>
+                <span id="item_s1"></span>
+                <p id="item_p3">VER TUDO</p>
+              </div> 
+            </div>
+            <div class="s_item" onclick="location.href='Cafe5.html'">
+              <div>
+                <img src="../dPro/photo/포지티브즈.jpeg">
+              </div>
+              <div id="item_p1">
+                <p>"레트로한 감성"</p>
+              </div>
+              <div class="d3">
+                <p id="item_p2">포지티브즈</p>
+                <span id="item_s1"></span>
+                <p id="item_p3">VER TUDO</p>
+              </div> 
+            </div>
+        </div>
+        <div class="container_Reco2">
+          <div class="s_item" onclick="location.href='Cafe4.html'">
+            <div>
+              <img src="../dPro/photo/교토정원.jpg">
+            </div>
+            <div id="item_p1">
+              <p>"마치 교토에 온것 같은"</p>
+            </div>
+            <div class="d3">
+              <p id="item_p2">교토정원</p>
+              <span id="item_s1"></span>
+              <p id="item_p3">VER TUDO</p>
+            </div> 
+          </div>
+          <div class="s_item" onclick="location.href='Cafe2.html'">
+            <div>
+              <img src="../dPro/photo/핀든하우스.jpeg">
+            </div>
+            <div id="item_p1">
+              <p>"감성적이며, 예술적인"</p>
+            </div>
+            <div class="d3">
+              <p id="item_p2">핀든하우스</p>
+              <span id="item_s1"></span>
+              <p id="item_p3">VER TUDO</p>
+            </div> 
+          </div>
+        </div>
+    </section>
+  </body>
+</html>
