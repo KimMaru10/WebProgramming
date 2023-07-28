@@ -1,1 +1,189 @@
-Hello World
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>나만 알고 싶은 춘천의 카페</title>
+      <meta charset="utf-8">
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+      <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&family=Joan&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="Home.css">
+      <script src="../jQuery/jquery-3.6.0.min.js"></script>
+      <style type="text/css">
+        a:link {color:black; text-decoration: none;}
+        a:visited {color:black; text-decoration: none;}
+       </style>
+  </head>
+
+  <body>
+    <header>
+        <div class="heder_container">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="Reco.html">추천</a></li>
+          </ul>
+        </div>
+      
+    </header>
+
+    <div>
+      <input type="checkbox" id="menuicon">
+      <label for="menuicon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <div class="sidebar">
+        <ul id="sidebar_ul">
+          <li><a href="Cafe1.html">래드브릭</a></li>
+          <li><a href="Cafe2.html">핀든하우스</a></li>
+          <li><a href="Cafe3.html">희랑</a></li>
+          <li><a href="Cafe4.html">교토정원</a></li>
+          <li> <a href="Cafe5.html">포지티브즈</a></li>
+        </ul>
+      </div>
+    </div>
+    <nav>
+        <script>
+            setTimeout(function(){
+                var pl = document.getElementById("p_left");
+                var pr = document.getElementById("p_right");
+                pl.style.left="18%";
+                pl.style.transitionDuration="2.5s"
+                pl.style.visibility="visible"
+                pr.style.right="19%";
+                pr.style.transitionDuration="2.5s"
+                pr.style.visibility="visible"
+                
+            },2000)
+        </script>
+        <div id="p_left">
+            <p>춘천의 인기 <br>있는 카페</p>
+        </div>
+        <div id="main_title">
+            <p>
+              김마루가 소개하는<br>
+              춘천 카페
+            <p>
+        </div>
+        <div class="nav_line">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="p_right">
+            <p>잘알려지지 <br>않은 카페</p>
+        </div>  
+    </nav>
+    <section>
+      <div class="HOT" onclick="location.href='Reco.html'" >
+        <div class="imgs">
+          <img src="photo/카페 드 220 볼트.png">
+        </div>
+        <div id="HOT_CAFE">
+          <span style="font-size: 70px;">Cafe</span> 
+          <span style="font-size: 30px;">Recommendation</span></div>
+        <div class="Go_Hot">
+          <p id="ph1">춘천에서 유명한 카페하면 여기다</p>
+          <span id="sh1"></span>
+          <p id="ph2">핫한 카페 바로 가기</p>
+        </div>
+      </div>
+      <div class="mypage">
+        <p style="font-size: 38px;">'글쓴이, 김마루 소개'</p><br>
+        <p style="font-size: 23px;">김마루는 춘천에 위치한 한림대학교에서 재학 중이다. 
+          김마루는 따뜻한 분위기를 가진 카페에서 시간을 보내는 것을 좋아한다. 
+          그중 가정집을 개조한 카페를 선호하고 있다. 
+          따라서 김마루가 직접 방문해보고 좋은 기억이 남은 학교 근처에 위치한 카페를 소개하려고 한다.
+        </p>
+      </div>
+      <div class="HOT_CAFE_text">
+        <p style="font-size: 38px;">'춘천에 핫한 카페'</p><br>
+        <p style="font-size: 20px;"> 
+          &nbsp;춘천은 서울 근방에 위치하고 있어 관광객들이 많이 찾고 있는 도시 중 하나이다. 
+          춘천은 현재도 옛 정취를 담은 레트로한 공간들이 존재하고 있다.
+        </p><br>
+        <p style="font-size: 20px;">
+          &nbsp;글쓴이는 정감있고 따뜻한 분위기를 가진 카페를 선정 해보왔다.
+          그러한 분위기를 가진 카페 중 옛 시절에 가정집을 개조하여 만든 카페 와 같은 
+          옛 모습 그대로 가지고 있는 카페 등 글쓴이 혼자만 알고 싶을 정도로 만족한 카페들을 공유해보려고 한다.   
+          따라서 글쓴이와 같은 취향을 가진 독자들에게 다양한 카페의 정보를 전달하고자 이 블로그를 제작하게 되었다. 
+        </p>
+      </div>
+      <div class="section_line">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+      <ul class="slides">
+        <input type="radio" name="radio-btn" id="img-1" checked />
+        <li class="slide-container">
+        <div class="slide">
+          <img src="photo/레드브릭.jpeg" />
+          <p>레드브릭</p>
+        </div>
+        <div class="nav">
+          <label for="img-5" class="prev">&#x2039;</label>
+          <label for="img-2" class="next">&#x203a;</label>
+        </div>
+        </li>
+    
+        <input type="radio" name="radio-btn" id="img-2" />
+        <li class="slide-container">
+            <div class="slide">
+              <img src="photo/핀든하우스.jpeg" />
+              <p>핀드하우스</p>
+            </div>
+        <div class="nav">
+          <label for="img-1" class="prev">&#x2039;</label>
+          <label for="img-3" class="next">&#x203a;</label>
+        </div>
+        </li>
+    
+        <input type="radio" name="radio-btn" id="img-3" />
+        <li class="slide-container">
+            <div class="slide">
+              <img src="photo/희랑.jpg" />
+              <p>희랑</p>
+            </div>
+        <div class="nav">
+          <label for="img-2" class="prev">&#x2039;</label>
+          <label for="img-4" class="next">&#x203a;</label>
+        </div>
+        </li>
+    
+        <input type="radio" name="radio-btn" id="img-4" />
+        <li class="slide-container">
+            <div class="slide">
+              <img src="photo/교토정원.jpg" />
+              <p>교토정원</p>
+            </div>
+        <div class="nav">
+          <label for="img-3" class="prev">&#x2039;</label>
+          <label for="img-5" class="next">&#x203a;</label>
+        </div>
+        </li>
+
+        <input type="radio" name="radio-btn" id="img-5" />
+        <li class="slide-container">
+            <div class="slide">
+              <img src="photo/포지티브즈.jpeg">
+              <p>포지티브즈</p>
+            </div>
+        <div class="nav">
+          <label for="img-4" class="prev">&#x2039;</label>
+          <label for="img-1" class="next">&#x203a;</label>
+        </div>
+        </li>
+        <li class="nav-dots">
+          <label for="img-1" class="nav-dot" id="img-dot-1"></label>
+          <label for="img-2" class="nav-dot" id="img-dot-2"></label>
+          <label for="img-3" class="nav-dot" id="img-dot-3"></label>
+          <label for="img-4" class="nav-dot" id="img-dot-4"></label>
+          <label for="img-5" class="nav-dot" id="img-dot-5"></label>
+        </li>
+    </ul>
+    </section>
+  </body>
+</html>
